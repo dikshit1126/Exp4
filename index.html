@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArcDesign | Architecture Firm</title>
+  <style>
+    :root {
+      --primary-color: #1e3d59;
+      --accent-color: #ff6e40;
+      --light-color: #f5f5f5;
+      --text-color: #333;
+      --shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      --radius: 12px;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--primary-color);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 30px;
+  min-height: 100vh;
+  gap: 60px;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.login-card h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.login-card label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.login-card input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.login-card .options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-card button:hover {
+  background-color: #ff5722;
+}
+
+.illustration {
+  max-width: 400px;
+  text-align: center;
+}
+
+.illustration img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: var(--radius);
+}
+
+.illustration h3 {
+  margin-top: 20px;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding-top: 120px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/685/685352.png" alt="Logo">
+      <span>ArcDesign</span>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav> <section class="main-content">
+    <div class="login-card">
+      <h2>Client Login</h2>
+      <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" required><label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" required>
+
+    <div class="options">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#" style="color: var(--primary-color); text-decoration: none;">Forgot Password?</a>
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<div class="illustration">
+  <img src="https://cdn.dribbble.com/users/146798/screenshots/13970361/media/e38f914802f4a2486a2d23180b578c3f.png" alt="Architecture Illustration">
+  <h3>Designs That Inspire</h3>
+</div>
+
+  </section>
+</body>
+</html>
